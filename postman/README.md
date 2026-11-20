@@ -1,0 +1,1 @@
+Export the completed Postman collection to this folder when the request set is finalised. Do not include real credentials, private tokens or unnecessary environment secrets. The collection should use a variable for the base URL where practical.
