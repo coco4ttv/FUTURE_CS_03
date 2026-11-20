@@ -1,3 +1,9 @@
-Evidence for API discovery, including the posts collection and individual post requests.
+# API Discovery
 
-Save the relevant screenshots in this folder. Use clear filenames such as `E01-get-all-posts.png` and `E02-get-individual-post.png`.
+This directory contains Postman evidence from initial API discovery against JSONPlaceholder.
+
+The requests cover retrieval of the posts collection and an individual post resource.
+
+Evidence:
+- E01 – Retrieve all posts
+- E02 – Retrieve an individual post
