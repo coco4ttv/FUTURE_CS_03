@@ -1,3 +1,9 @@
-Evidence from HTTP response header, HTTPS and CORS inspection.
+# Security Headers
 
-Save the relevant screenshots in this folder, using the E07 and E15 evidence numbers.
+This directory contains evidence from inspection of HTTP response headers, HTTPS usage and cross-origin resource sharing (CORS) behaviour for JSONPlaceholder.
+
+The recorded responses are considered in the context of the demonstration API and its documented behaviour.
+
+Evidence:
+- E07 – HTTP response headers
+- E15 – HTTPS and CORS inspection
