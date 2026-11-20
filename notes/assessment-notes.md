@@ -7,7 +7,7 @@
 - **Tool:** Postman
 - **Supporting tool:** Browser Developer Tools
 - **Assessment type:** Read-only API security risk analysis, with a limited simulated POST request
-- **Assessment date:** [Add date]
+- **Assessment date:** 11 november 2026
 
 ## Recording guidance
 
