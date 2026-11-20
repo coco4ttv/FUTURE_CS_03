@@ -1,3 +1,8 @@
-Evidence from the review of rate-limit response headers and documented API behaviour.
+# Rate Limiting
 
-Do not perform load, flooding or stress tests. Save the relevant screenshot as E11.
+This directory contains evidence from the inspection of rate-limit-related response headers returned by JSONPlaceholder.
+
+The assessment was limited to ordinary API requests. No load, flooding or stress testing was conducted.
+
+Evidence:
+- E11 – Rate-limit header inspection
