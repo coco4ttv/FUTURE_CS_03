@@ -253,7 +253,7 @@ These observations relate to **API8:2023 – Security Misconfiguration**. The ev
 
 **Evidence**
 
-E07 and E15 in `evidence/05-security-headers/`.
+E07 in `evidence/05-security-headers/`.
 
 ### 5.6 Input Validation
 
@@ -510,11 +510,17 @@ For a real organisation, the recommended priorities are to protect private data 
 
 | Evidence | Assessment area | Repository location |
 |---|---|---|
-| E01–E02 | API discovery | `evidence/01-api-discovery/` |
-| E03 | Authentication | `evidence/02-authentication/` |
-| E04 | Data exposure | `evidence/03-data-exposure/` |
-| E05–E06 | Access control | `evidence/04-access-control/` |
-| E07 and E15 | Security headers and HTTPS/CORS review | `evidence/05-security-headers/` |
-| E08–E10 | Input validation | `evidence/06-input-validation/` |
-| E11 | Rate limiting | `evidence/07-rate-limiting/` |
-| E12–E14 | Request methods and persistence | `evidence/08-request-methods/` |
+| E01 | Posts collection | `evidence/01-api-discovery/E01-posts-list.png` |
+| E02 | Individual post | `evidence/01-api-discovery/E02-single-post.png` |
+| E03 | Unauthenticated user request | `evidence/02-authentication/E03-user4-unauthenticated-request.png` |
+| E04 | User profile response | `evidence/03-data-exposure/E04-user-data-response.png` |
+| E05 | Post ID 1 response | `evidence/04-access-control/E05-post-1.png` |
+| E06 | Post ID 2 response | `evidence/04-access-control/E06-post-2.png` |
+| E07 | Security response headers | `evidence/05-security-headers/E07-response-headers.png` |
+| E08 | Valid userId query | `evidence/06-input-validation/E08-valid-query.png` |
+| E09 | Non-numeric userId query | `evidence/06-input-validation/E09-invalid-query.png` |
+| E10 | Non-matching userId query | `evidence/06-input-validation/E10-nonexistent-resource.png` |
+| E11 | Rate-limit response headers | `evidence/07-rate-limiting/E11-rate-limit-headers.png` |
+| E12 | Simulated POST response | `evidence/08-request-methods/E12-create-post.png` |
+| E13 | Persistence check (404 response) | `evidence/08-request-methods/404-for-the uploaded-101.png` |
+| E14 | OPTIONS method inspection | `evidence/08-request-methods/HTTP-Methods-Inspection.png` |
