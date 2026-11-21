@@ -132,7 +132,7 @@ This test relates to the risk area described by **API2:2023 – Broken Authentic
 
 **Evidence**
 
-E03 in `evidence/02-authentication/`.
+[E03](/evidence/02-authentication) in `evidence/02-authentication/`.
 
 ### 5.3 User Data Exposure
 
@@ -166,7 +166,7 @@ This area is related to **API3:2023 – Broken Object Property Level Authorizati
 
 **Evidence**
 
-E04 in `evidence/03-data-exposure/`.
+[E04](/evidence/03-data-exposure) in `evidence/03-data-exposure/`.
 
 ### 5.4 Access Control – Comparison of Post IDs
 
@@ -201,7 +201,7 @@ This test relates to **API1:2023 – Broken Object Level Authorization (BOLA)**.
 
 **Evidence**
 
-E05–E06 in `evidence/04-access-control/`.
+[E05–E06](/evidence/04-access-control)in `evidence/04-access-control/`.
 
 ### 5.5 HTTP Response Headers and Security Configuration
 
@@ -253,7 +253,7 @@ These observations relate to **API8:2023 – Security Misconfiguration**. The ev
 
 **Evidence**
 
-E07 in `evidence/05-security-headers/`.
+[E07](/evidence/05-security-headers) in `evidence/05-security-headers/`.
 
 ### 5.6 Input Validation
 
@@ -290,7 +290,7 @@ The OWASP REST Security Cheat Sheet recommends validating input type, format, le
 
 **Evidence**
 
-E08–E10 in `evidence/06-input-validation/`.
+[E08–E10](/evidence/06-input-validation) in `evidence/06-input-validation/`.
 
 ### 5.7 Rate-Limit Header Review
 
@@ -329,7 +329,7 @@ This area relates to **API4:2023 – Unrestricted Resource Consumption**. The as
 
 **Evidence**
 
-E11 in `evidence/07-rate-limiting/`.
+[E11](/evidence/07-rate-limiting) in `evidence/07-rate-limiting/`.
 
 ### 5.8 Simulated POST and Persistence Verification
 
@@ -364,7 +364,7 @@ This is an observed limitation of the JSONPlaceholder test environment, not a co
 
 **Evidence**
 
-E12–E13 in `evidence/08-request-methods/`.
+[E12–E13](/evidence/08-request-methods) in `evidence/08-request-methods/`.
 
 ### 5.9 HTTP Method Inspection
 
@@ -400,7 +400,7 @@ The method restriction and authorisation recommendations are covered by the OWAS
 
 **Evidence**
 
-E14 in `evidence/08-request-methods/`.
+[E14](/evidence/08-request-methods) in `evidence/08-request-methods/`.
 
 ## 6. Findings Register and Assessment Status
 
