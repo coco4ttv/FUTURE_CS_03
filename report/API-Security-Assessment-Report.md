@@ -98,7 +98,7 @@ Maintain an accurate API inventory and document each endpoint, its purpose, acce
 
 **Evidence**
 
-[E01–E02](evidence/01-api-discovery) in `evidence/01-api-discovery/`.
+[E01–E02](/evidence/01-api-discovery) in `evidence/01-api-discovery/`.
 
 ### 5.2 Authentication – Public User Endpoint
 
