@@ -25,11 +25,11 @@ JSONPlaceholder simulates write operations. A successful response to a simulated
 | `evidence/` | Screenshots grouped by assessment area |
 | `notes/` | Working assessment notes and observations |
 | `postman/` | Exported Postman collection and environment guidance |
-| `report/` | Final API security assessment report |
+| `report/` | [Final API security assessment report](report/API-Security-Assessment-Report.md) |
 
 ## Assessment status
 
-The repository is being populated as the assessment evidence and analysis are finalised. Test results, severity ratings and conclusions will be based on the recorded responses. Areas that cannot be verified with JSONPlaceholder will be identified as limitations rather than reported as confirmed vulnerabilities.
+The practical testing and initial report are complete. The report records the observed responses, business impact, recommended controls and relevant OWASP guidance. Areas that cannot be verified with JSONPlaceholder are identified as limitations rather than reported as confirmed vulnerabilities.
 
 ## References
 
