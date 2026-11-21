@@ -6,7 +6,7 @@
 - **Base URL:** https://jsonplaceholder.typicode.com
 - **Tool:** Postman
 - **Assessment type:** API security risk analysis using read-only requests and a limited simulated POST request
-- **Assessment period:** 20–21 November 2026
+- **Assessment period:** November 2026
 
 ## Scope and limitations
 
