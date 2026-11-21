@@ -1,39 +1,40 @@
 # API Security Risk Analysis
 
-A read-only API security assessment of JSONPlaceholder, a public demonstration REST API, completed as part of the Future Interns Cyber Security Internship (Task 3).
+A practical API security assessment of JSONPlaceholder, a public demonstration REST API, completed as part of the Future Interns Cyber Security Internship (Task 3).
 
 ## Assessment overview
 
-The assessment reviews API discovery, unauthenticated access, response data exposure, object access behaviour, HTTP response headers, input handling and resource-consumption controls. A limited POST request is also included to observe the demonstration API's simulated resource-creation behaviour.
+The assessment covered API discovery, unauthenticated access, response data exposure, object access behaviour, HTTP response headers, input handling and resource-consumption controls. A limited POST request and follow-up persistence check were also performed.
 
-The work is documented using observed responses and supporting screenshots. JSONPlaceholder is a learning environment containing synthetic data; findings from this assessment should not be treated as evidence of vulnerabilities in a production service.
+The assessment was carried out using controlled requests in Postman. The results are documented with supporting screenshots and a written report. JSONPlaceholder uses synthetic data and simulates write operations, so observations from this exercise should not be treated as confirmed vulnerabilities in a production service.
 
-## Scope and limitations
+## Report
+
+- **[API Security Risk Analysis Report (PDF)](report/API_Security_Risk_Analysis_Report.pdf)** – report prepared for submission.
+- [Markdown version of the report](report/API-Security-Assessment-Report.md)
+
+## Scope and methodology
 
 - **Target:** https://jsonplaceholder.typicode.com
 - **Primary tool:** Postman
 - **Supporting tool:** Browser Developer Tools
-- **Approach:** Documentation review and controlled requests to public demonstration endpoints
-- **Excluded:** Exploitation, bypass attempts, destructive testing, load testing and testing private or production APIs
+- **Approach:** Review of the API documentation followed by controlled requests to public demonstration endpoints.
+- **Excluded:** Exploitation, bypass attempts, destructive testing, load testing and testing of private or production APIs.
 
-JSONPlaceholder simulates write operations. A successful response to a simulated POST request does not establish that data was persistently stored. The service does not provide a genuine user authentication and token lifecycle suitable for a full authentication assessment.
+The service does not provide a genuine user authentication and token lifecycle suitable for a full authentication assessment. Its write operations are simulated; a successful POST response does not establish that submitted data was permanently stored. These limitations are reflected in the report.
 
 ## Repository contents
 
 | Path | Contents |
 |---|---|
-| `evidence/` | Screenshots grouped by assessment area |
-| `notes/` | Working assessment notes and observations |
-| `postman/` | Exported Postman collection and environment guidance |
-| `report/` | [Final API security assessment report](report/API-Security-Assessment-Report.md) |
+| `evidence/` | Postman screenshots grouped by assessment area |
+| `notes/` | Supporting assessment observations |
+| `postman/` | Exported Postman collection |
+| `report/` | PDF and Markdown versions of the assessment report |
 
-## Assessment status
+## Tools and references
 
-The practical testing and initial report are complete. The report records the observed responses, business impact, recommended controls and relevant OWASP guidance. Areas that cannot be verified with JSONPlaceholder are identified as limitations rather than reported as confirmed vulnerabilities.
-
-## References
-
+- [Postman](https://www.postman.com/)
 - [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
 - [JSONPlaceholder Guide](https://jsonplaceholder.typicode.com/guide/)
 - [OWASP API Security Top 10](https://owasp.org/www-project-api-security/)
-- [OWASP API Security Project](https://github.com/OWASP/API-Security)
