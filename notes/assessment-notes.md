@@ -113,15 +113,27 @@ No destructive requests or load/stress tests were performed. JSONPlaceholder sim
 
 ### 13 – Persistence verification
 
-- **Status:** Not verified in the evidence reviewed.
-- **Observation:** JSONPlaceholder documents that write operations are simulated. A follow-up GET would need to be recorded separately to describe the actual observed persistence-check response.
-- **Evidence:** No confirmed persistence-verification response captured in the evidence reviewed.
+- **Request:** GET /posts/101, following the simulated POST /posts request that returned ID 101
+- **HTTP response:** 404 Not Found
+- **Response body:** Empty JSON object (`{}`)
+- **Observation:** The resource returned by the simulated POST request could not be retrieved using the returned ID.
+- **Interpretation:** This is consistent with JSONPlaceholder's documented behaviour of simulating write operations rather than permanently storing submitted changes. The 201 response from the POST request therefore should not be interpreted as proof that the new post was saved.
+- **Business relevance:** In a real business system, acknowledging an order, booking or customer request that was not actually stored could result in lost transactions, operational delays, customer complaints and financial disputes.
+- **Recommended controls:** Confirm successful database commits before returning a successful creation response, use transactions for critical writes, monitor failed writes and reconcile important transactions.
+- **Limitation:** This is an expected limitation of the demonstration service, not evidence of a confirmed persistence vulnerability in a production API.
+- **Evidence:** E13 – `evidence/08-request-methods/`
 
 ### 14 – HTTP method inspection
 
-- **Status:** Not verified in the evidence reviewed.
-- **Observation:** No OPTIONS response or confirmed Allow header is present in the screenshots reviewed.
-- **Evidence:** No confirmed OPTIONS response captured in the evidence reviewed.
+- **Request:** OPTIONS /posts
+- **HTTP response:** 204 No Content
+- **Headers observed:** `Access-Control-Allow-Methods` was present. The screenshot visibly shows GET, HEAD, PUT, PATCH, POST and DELETE among the listed methods; the full value is truncated in the captured view. The response also included `Access-Control-Allow-Credentials: true`.
+- **Observation:** The server returned a successful OPTIONS response and advertised supported cross-origin methods in its CORS response.
+- **Interpretation:** This identifies methods advertised by the server for cross-origin requests. It does not prove that each method is enabled for every resource, that the methods can be used successfully, or that access controls are correctly enforced.
+- **Business relevance:** If a real API exposed write or delete operations without appropriate authorisation, users might be able to change or remove information they should not control.
+- **Recommended controls:** Restrict enabled methods to those required, enforce authentication and object-level authorisation on every sensitive operation, and configure CORS origins and credentials narrowly.
+- **Limitation:** No PUT, PATCH or DELETE requests were sent. Their behaviour and authorisation controls were not tested.
+- **Evidence:** E14 – `evidence/08-request-methods/`
 
 ### 15 – HTTPS and CORS review
 
@@ -162,4 +174,4 @@ The assessment confirmed that the tested JSONPlaceholder endpoints returned post
 
 The response-header review identified technology disclosure through `X-Powered-By: Express`, along with rate-limit metadata and other response headers. A simulated POST request returned HTTP 201 and an ID, but this does not demonstrate persistent storage.
 
-The work did not verify production authentication or authorisation controls, token security, actual rate-limit enforcement, persistence of created resources, or the OPTIONS method response. These limitations are important because JSONPlaceholder is a demonstration service using synthetic data and simulated write operations. No confirmed production vulnerability is claimed on the basis of these tests.
+The work did not verify production authentication or authorisation controls, token security or actual rate-limit enforcement. The persistence check showed that the resource returned by the simulated POST request could not be retrieved afterwards (GET /posts/101 returned 404). The OPTIONS request returned 204 and advertised several HTTP methods in its CORS response, but no PUT, PATCH or DELETE operation was attempted. These limitations are important because JSONPlaceholder is a demonstration service using synthetic data and simulated write operations. No confirmed production vulnerability is claimed on the basis of these tests.
